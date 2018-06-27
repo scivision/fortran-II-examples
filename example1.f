@@ -37,7 +37,7 @@
         sum = sum + alist(i)
       end do
       
-      avrgII = sum / real(n)
+      avrg77 = sum / real(n)
       
       end
       

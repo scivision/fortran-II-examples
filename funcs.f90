@@ -16,12 +16,11 @@ elemental real function arctan(x)
 
   real, intent(in) :: x
   real :: prevxp, presxp, term, y
-  real :: nan, pi
+  real :: nan
+  real, parameter :: pi = 4.*atan(1.)
   integer :: i
 
   nan = ieee_value(0., ieee_quiet_nan)
-
-  pi = 4.*atan(1.)
 
   if (x < 0.) then
     arctan = nan
