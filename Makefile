@@ -1,8 +1,8 @@
 FC=gfortran
 .PHONY: all
-all: arctan example1 bench
+all: arctan example1 bench heron
 
-FFLAGS = -O3
+FFLAGS = -g
 ifeq ($(FC),flang)
   FFLAGS += -static-flang-libs
 endif
@@ -13,8 +13,11 @@ arctan: funcs.o funcs58.o arctan.f
 example1: funcs.o example1.f
 	$(FC) $(FFLAGS) $^ -o $@
 
+heron: herons_formula.f
+	$(FC) $(FFLAGS) $^ -o $@
+
 bench: funcs.o funcs58.o benchmark.f90
-		$(FC) $(FFLAGS) $^ -o $@
+	$(FC) $(FFLAGS) $^ -o $@
 
 funcs.o: funcs.f90
 	$(FC) $(FFLAGS) -c $^ -o $@
