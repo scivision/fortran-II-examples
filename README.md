@@ -58,15 +58,18 @@ Using the same algorithm, modern Fortran 95+ techniques are approximately the sa
 
 ## Notes
 
-Subprograms/program units (now known as "procedures" e.g. functions and subroutines) were concluded with `RETURN` for Fortran II.  
-`END` was for the overall program end **only**. 
-Fortran 66 allowed `END` to be used for procedures as well.
-Perhaps this is an origin for the maddening (unnecessary) practice in Fortran 66 and 77 of ending procedures with
+Subprograms/program units (now known as "procedures" e.g. functions and subroutines) must be concluded for Fortran II (1958) with
 ```fortran
 RETURN
 END
 ```
+However, since Fortran 66, all that's needed for ending procedures (functions and subroutines) is 
+```fortran
+END
+````
+so there's no need to be anachronistic--just end with `end subroutine` or `end function`
 
+* Fortran II (1958) [manual](http://archive.computerhistory.org/resources/text/Fortran/102653989.05.01.acc.pdf)
 * Fortran 66 [standard](http://web.eah-jena.de/~kleine/history/languages/ansi-x3dot9-1966-Fortran66.pdf)
 * Fortran 77 [langauge reference](http://physik.uibk.ac.at/hephy/praktikum/fortran_manual.pdf)
 
