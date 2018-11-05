@@ -1,6 +1,6 @@
 # fortran-II-examples
 Fortran II (year 1958) examples from IBM 704 Fortran II 
-[manual](archive.computerhistory.org/resources/text/Fortran/102653989.05.01.acc.pdf) 
+[manual](http://archive.computerhistory.org/resources/text/Fortran/102653989.05.01.acc.pdf) 
 with modern Fortran equivalents.
 
 The benchmark shows that good modern Fortran coding can be orders of magnitude faster than Fortran 77 techniques.
