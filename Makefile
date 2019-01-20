@@ -3,9 +3,6 @@ FC=gfortran
 all: arctan example1 bench heron
 
 FFLAGS = -g
-ifeq ($(FC),flang)
-  FFLAGS += -static-flang-libs
-endif
 
 arctan: funcs.o funcs58.o arctan.f
 	$(FC) $(FFLAGS) $^ -o $@
